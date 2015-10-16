@@ -145,6 +145,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Vendor Service Providers...
+         */
+        Jeremytubbs\Igor\IgorServiceProvider::class,
+
     ],
 
     /*
