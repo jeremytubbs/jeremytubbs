@@ -4,7 +4,9 @@
     "gulp": "^3.8.8"
   },
   "dependencies": {
+  	"bourbon": "^4.2.5",
+    "bourbon-neat": "^1.7.2",
     "laravel-elixir": "^3.0.0",
-    "bootstrap-sass": "^3.0.0"
+    "picturefill": "^3.0.1"
   }
 }
