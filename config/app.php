@@ -149,6 +149,7 @@ return [
          * Vendor Service Providers...
          */
         Jeremytubbs\Igor\IgorServiceProvider::class,
+        //Jeremytubbs\Lair\LairServiceProvider::class,
 
     ],
 

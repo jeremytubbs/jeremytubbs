@@ -1,0 +1,45 @@
+.cards {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+}
+
+.card {
+  @include flex-basis(15em);
+  @include flex-grow(1);
+  @include transition (all 0.2s ease-in-out);
+  //position: relative;
+  margin: 0 $card-margin $base-spacing $card-margin;
+
+  &__image {
+    position: relative;
+
+    // Image background for content
+    img {
+      display: block;
+      border-radius: 2px 2px 0 0;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    &__title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: $card-margin;
+      color: $dark-gray;
+    }
+
+    &__type {
+      position: absolute;
+      top: -10px;
+      right: 0;
+      padding: 0.5em;
+    }
+
+  }
+}

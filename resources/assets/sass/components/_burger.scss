@@ -1,0 +1,53 @@
+@mixin bun($color) {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: $color;
+  transition: background 0.3s, transform 0.3s, top 0.3s;
+}
+
+.burger-box {
+  z-index: 997;
+  position: absolute;
+  left: 25px;
+  top: 18px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.burger {
+  top: 10px;
+  content: "";
+  font-size: 0px;
+  user-select: none;
+  @include bun($burger-color);
+  &:before {
+    @include bun($burger-color);
+    top: -8px;
+    left: 0;
+    content: "";
+  }
+  &:after {
+    @include bun($burger-color);
+    top: 8px;
+    left: 0;
+    content: "";
+  }
+}
+
+.is-open .burger {
+  // @include transform(translateX(220px));
+  @include transition(all 0.25s linear);
+  background: transparent;
+  &:before {
+    top: 0;
+    transform: rotateZ(-45deg);
+  }
+
+  &:after {
+    top: 0;
+    transform: rotateZ(45deg);
+  }
+}
+
