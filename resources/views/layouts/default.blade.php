@@ -1,1 +1,1 @@
-<p>hello default</p>
+@include('partials.nav')
