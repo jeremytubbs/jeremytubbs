@@ -11,7 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-	$layout = 'default';
-    return view('app', compact('layout'));
-});
+Route::get('/', ['as' => 'pages.home', 'uses' => 'PagesController@home']);

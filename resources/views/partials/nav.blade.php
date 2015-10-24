@@ -7,8 +7,8 @@
     </a>
   </div>
   <div class="nav__item">
-    <a href="#" class="logo">
-      <h1>Title</h1>
+    <a href="/" class="logo">
+      <h1>Jeremy Tubbs</h1>
     </a>
   </div>
   <div class="nav__item">
@@ -16,10 +16,8 @@
       <div class="dropdown-container">
         <p class="dropdown-button flex-center">All</p>
         <ul class="dropdown-menu dropdown-select">
-          <li>Dropdown Menu Item</li>
-          <li>Another Item</li>
-          <li>Item Three</li>
-          <li>The Last One</li>
+          <li>Artwork</li>
+          <li></li>
         </ul>
       </div>
     </div>
@@ -28,9 +26,10 @@
 
 <nav class="sliding-panel-content" role="navigation">
   <ul>
-    <li><a href="#">Item 1</a></li>
-    <li><a href="#">Item 2</a></li>
-    <li><a href="#">Item 3</a></li>
+    <li><a href="/projects">Projects</a></li>
+    <li><a href="/posts">Posts</a></li>
+    {{-- <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li> --}}
   </ul>
 </nav>
 
