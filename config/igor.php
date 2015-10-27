@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'types' => ['posts'],
+    'types' => ['posts', 'projects'],
 
     // choose between gd and imagick
     'image_driver' => 'imagick',
