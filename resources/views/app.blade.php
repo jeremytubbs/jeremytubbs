@@ -20,7 +20,9 @@
 </head>
 
 <body>
-  @include('layouts.'.$layout)
+  @include('partials.nav')
+
+  @yield('content')
   <script src="js/app.js"></script>
   @yield('scripts')
 </body>
