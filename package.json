@@ -1,12 +1,10 @@
 {
   "private": true,
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.8.8"
   },
   "dependencies": {
-    "bourbon": "^4.2.5",
-    "bourbon-neat": "^1.7.2",
-    "jquery": "^2.1.4",
-    "laravel-elixir": "^3.4.1"
+    "laravel-elixir": "^4.0.0",
+    "bootstrap-sass": "^3.0.0"
   }
 }
