@@ -2,11 +2,11 @@
 
 return [
     // your custom post types
-    'types' => [],
+    'types' => ['posts', 'projects'],
 
     // custom fields for your post types
     'custom_fields' => [
-        //'projects' => ['started_at', 'completed_at'],
+        'projects' => ['started_at', 'completed_at'],
     ],
 
     // use the package routes
@@ -14,7 +14,8 @@ return [
 
     // custom route for a custom post type
     'type_routes' => [
-        // 'ModelName' => 'route-name',
+        'Project' => 'projects',
+        'Post'    => 'posts',
     ],
 
     // choose between gd and imagick
