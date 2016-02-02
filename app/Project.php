@@ -8,4 +8,6 @@ class Project extends IgorProject
 {
     use \Jeremytubbs\Igor\Traits\SluggerTrait;
 
+    protected $dates = ['started_at', 'completed_at'];
+
 }
