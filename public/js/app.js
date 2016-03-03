@@ -3247,7 +3247,7 @@ return this.ScrollReveal;
 require('./core/dependencies');
 require('./components/components');
 
-},{"./components/components":12,"./core/dependencies":15}],11:[function(require,module,exports){
+},{"./components/components":12,"./core/dependencies":16}],11:[function(require,module,exports){
 'use strict';
 
 var burgerBox = document.querySelector('.burger-box');
@@ -3277,8 +3277,9 @@ screenOverlay.addEventListener('click', function (e) {
 require('./burger');
 require('./headroom');
 require('./masonry');
+require('./openseadragon');
 
-},{"./burger":11,"./headroom":13,"./masonry":14}],13:[function(require,module,exports){
+},{"./burger":11,"./headroom":13,"./masonry":14,"./openseadragon":15}],13:[function(require,module,exports){
 "use strict";
 
 require('./../vendor/headroom');
@@ -3290,7 +3291,7 @@ var headroom = new Headroom(myElement);
 // initialise
 headroom.init();
 
-},{"./../vendor/headroom":16}],14:[function(require,module,exports){
+},{"./../vendor/headroom":17}],14:[function(require,module,exports){
 'use strict';
 
 var Masonry = require('masonry-layout');
@@ -3305,11 +3306,11 @@ var grid = document.querySelector('.masonry');
 //     itemSelector: '.masonry-item',
 //     columnWidth: '.masonry-sizer',
 //     percentPosition: true
-// });
+// })
 // new imagesLoaded( grid, function() {
 //   // layout Masonry after each image loads
-//   msnry.layout();
-// });
+//   msnry.layout()
+// })
 /* end show layout animation */
 
 /* wait for imagesloaded */
@@ -3319,7 +3320,10 @@ new imagesLoaded(grid, function () {
     columnWidth: '.masonry-sizer',
     percentPosition: true
   });
-  sr.reveal('.reveal', { origin: 'right' });
+  sr.reveal('.reveal', {
+    origin: 'bottom',
+    distance: '1rem'
+  });
 });
 /* end wait for images loaded */
 
@@ -3329,7 +3333,57 @@ new imagesLoaded(grid, function () {
 require('./../vendor/openseadragon/openseadragon');
 require('./../vendor/openseadragon/openseadragon-viewerinputhook');
 
-},{"./../vendor/openseadragon/openseadragon":18,"./../vendor/openseadragon/openseadragon-viewerinputhook":17}],16:[function(require,module,exports){
+var osd_viewer = null;
+enableSeadragon();
+
+var osd_thumb = document.querySelector('.osd-thumb');
+if (osd_thumb) {
+  osd_thumb.addEventListener('click', function (e) {
+    e.preventDefault();
+    var osd_source = osd_thumb.getAttribute('data-osd');
+    enableSeadragon(osd_source);
+  });
+}
+
+function enableSeadragon(osd_source) {
+  if (!osd_viewer) {
+    var container = document.querySelector('#osd-container');
+    var osd_source = container.getAttribute('data-osd');
+    osd_viewer = OpenSeadragon({
+      id: 'osd-container',
+      tileSources: osd_source,
+      prefixUrl: '/images/openseadragon/images/',
+      toolbar: 'osd-controls',
+      zoomInButton: 'osd-in',
+      zoomOutButton: 'osd-out',
+      fullPageButton: 'osd-full',
+      homeButton: 'osd-home'
+    });
+    // disable the scroll handler to enable page scrolling inside the viewer area
+    osd_viewer.addViewerInputHook({ hooks: [{ tracker: 'viewer', handler: 'scrollHandler', hookHandler: onViewerScroll }] });
+    // zoom in a bit on image load
+    osd_viewer.addHandler('open', function () {
+      var zoom = osd_viewer.viewport.getZoom();
+      osd_viewer.viewport.zoomTo(zoom + 0.2, null, true);
+    });
+  } else {
+    osd_viewer.open(osd_source);
+  }
+}
+
+function onViewerScroll(event) {
+  // Disable mousewheel zoom on the viewer and let the original mousewheel events bubble
+  if (!osd_viewer.isFullPage()) {
+    event.preventDefaultAction = true;
+    event.stopHandlers = true;
+    return true;
+  }
+}
+
+},{"./../vendor/openseadragon/openseadragon":19,"./../vendor/openseadragon/openseadragon-viewerinputhook":18}],16:[function(require,module,exports){
+"use strict";
+
+},{}],17:[function(require,module,exports){
 /*!
  * headroom.js v0.7.0 - Give your page some headroom. Hide your header until you need it
  * Copyright (c) 2014 Nick Williams - http://wicky.nillia.ms/headroom.js
@@ -3705,7 +3759,7 @@ require('./../vendor/openseadragon/openseadragon-viewerinputhook');
   window.Headroom = Headroom;
 })(window, document);
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 //! OpenSeadragonViewerInputHook 1.1.0
 //! Build date: 2014-01-13
 //! Git commit: v1.0.0-13-g7e47873
@@ -3841,7 +3895,7 @@ require('./../vendor/openseadragon/openseadragon-viewerinputhook');
  *
  */
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 //! OpenSeadragon 2.1.0
 //! Built on 2015-11-12
 //! Git commit: v2.1.0-3-b2c17b5

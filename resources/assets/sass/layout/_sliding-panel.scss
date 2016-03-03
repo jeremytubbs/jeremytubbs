@@ -7,7 +7,7 @@ $sliding-panel-color-hover: #fff;
 $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
 
 .sliding-panel {
-  @include position(fixed, 0px auto 0px 0px);
+  @include position(fixed, 50px auto 0px 0px);
   @include size(220px 100%);
   @include transform(translateX(-220px));
   @include transition(all 0.25s linear);
@@ -23,26 +23,22 @@ $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
 
   li {
     list-style: none;
-    &:first-child {
-      margin-top: 50px;
-    }
-  }
+    a {
+      border-bottom: $sliding-panel-border;
+      color: $sliding-panel-color;
+      display: block;
+      font-weight: bold;
+      padding: 1em;
+      text-decoration: none;
 
-  li a {
-    border-bottom: $sliding-panel-border;
-    color: $sliding-panel-color;
-    display: block;
-    font-weight: bold;
-    padding: 1em;
-    text-decoration: none;
+      &:focus {
+        background-color: $sliding-panel-background-focus;
+      }
 
-    &:focus {
-      background-color: $sliding-panel-background-focus;
-    }
-
-    &:hover {
-      background-color: $sliding-panel-background-hover;
-      color: $sliding-panel-color-hover;
+      &:hover {
+        background-color: $sliding-panel-background-hover;
+        color: $sliding-panel-color-hover;
+      }
     }
   }
 
@@ -52,7 +48,7 @@ $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
 }
 
 .screen-overlay {
-  @include position(fixed, 0px 0px 0px 0px);
+  @include position(fixed, 50px 0px 0px 0px);
   @include transition;
   background: black;
   opacity: 0;

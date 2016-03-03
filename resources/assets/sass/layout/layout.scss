@@ -1,13 +1,4 @@
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 80%;
-}
-
-@media #{$gl-xs}{
-  .container {
-    width: 95%;
-  }
-}
+@import "header";
+@import "sliding-panel";
+// @import "sliding-panel-right";
+@import "container";

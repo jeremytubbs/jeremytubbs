@@ -1,0 +1,53 @@
+$plus-color: #FFF;
+
+.plus {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  z-index: 3;
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  content: '';
+  font-size: 0px;
+  user-select: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 1px;
+    top: 50%;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: -1px;
+    background: $plus-color;
+    transition: all .3s ease;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 24px;
+    top: 50%;
+    left: 50%;
+    margin-left: -1px;
+    margin-top: -12px;
+    background: $plus-color;
+    transition: all .3s ease;
+  }
+}
+
+a:hover {
+  .plus {
+    &:before {
+      transform:rotate(180deg)
+    }
+    &:after {
+      transform:rotate(-90deg);
+      opacity: 0;
+    }
+  }
+}
