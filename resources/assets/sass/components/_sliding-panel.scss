@@ -1,0 +1,66 @@
+$sliding-panel-border-color: $dark-gray;
+$sliding-panel-background: lighten($sliding-panel-border-color, 5%);
+$sliding-panel-color: #fff;
+$sliding-panel-border: 1px solid $sliding-panel-border-color;
+$sliding-panel-background-hover: $action-color;
+$sliding-panel-color-hover: #fff;
+$sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
+
+.sliding-panel {
+  @include position(fixed, 0px auto 0px 0px);
+  @include size(220px 100%);
+  @include transform(translateX(-220px));
+  @include transition(all 0.25s linear);
+  background: $sliding-panel-background;
+  z-index: 998;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    &:first-child {
+      margin-top: 50px;
+    }
+  }
+
+  li a {
+    border-bottom: $sliding-panel-border;
+    color: $sliding-panel-color;
+    display: block;
+    font-weight: bold;
+    padding: 1em;
+    text-decoration: none;
+
+    &:focus {
+      background-color: $sliding-panel-background-focus;
+    }
+
+    &:hover {
+      background-color: $sliding-panel-background-hover;
+      color: $sliding-panel-color-hover;
+    }
+  }
+
+  &.sliding-panel--open {
+    @include transform(translateX(0));
+  }
+}
+
+.screen-overlay {
+  @include position(fixed, 0px 0px 0px 0px);
+  @include transition;
+  background: black;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 997;
+
+  &.screen-overlay--visible {
+    opacity: 0.5;
+    visibility: visible;
+  }
+}

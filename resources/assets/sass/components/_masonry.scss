@@ -1,0 +1,29 @@
+/* ---- grid ---- */
+
+.masonry {
+  z-index: 0;
+  top: 60px;
+}
+
+/* clear fix */
+.masonry:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .masonry-item ---- */
+
+.masonry-sizer,
+.masonry-item {
+  width: 50%;
+}
+
+.masonry-item {
+  float: left;
+}
+
+.masonry-item img {
+  display: block;
+  max-width: 100%;
+}

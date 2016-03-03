@@ -4,7 +4,13 @@
     "gulp": "^3.8.8"
   },
   "dependencies": {
-    "laravel-elixir": "^4.0.0",
-    "bootstrap-sass": "^3.0.0"
+  	"gulp": "^3.9.0",
+    "laravel-elixir": "^4.0.0"
+  },
+  "dependencies": {
+    "bourbon": "^4.2.6",
+    "imagesloaded": "^4.1.0",
+    "masonry-layout": "^4.0.0",
+    "scrollreveal": "^3.0.9"
   }
 }

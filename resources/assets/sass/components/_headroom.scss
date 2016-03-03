@@ -1,0 +1,16 @@
+.headroom {
+  z-index: 1;
+  background: #ff9933;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+.headroom--unpinned {
+  top: -40px;
+}

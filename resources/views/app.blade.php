@@ -21,9 +21,8 @@
 
 <body>
   @include('partials.nav')
-
   @yield('content')
-  <script src="js/app.js"></script>
+  <script src="/js/app.js"></script>
   @yield('scripts')
 </body>
 </html>

@@ -1,7 +1,30 @@
-@import "base/reset";
+@import "vendor/normalize";
+@import "base/variables";
 @import "node_modules/bourbon/app/assets/stylesheets/bourbon";
-@import "base/grid-settings";
-@import "node_modules/bourbon-neat/app/assets/stylesheets/neat";
-@import "base/base";
-@import "layouts/layouts";
+@import "vendor/gridlex-vars.scss";
+@import "vendor/gridlex";
 @import "components/components";
+@import "layout/layout";
+
+/* Temp Styles */
+.reveal { visibility: hidden; }
+
+.disable-scroll {
+  margin: 0;
+  height: 100%;
+  overflow: hidden
+}
+
+.logo {
+  width: 100%;
+  text-align: right;
+  margin-right: 1rem;
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  h1 {
+    font-weight: normal;
+    font-size: $base-font-size * 1.25;
+  }
+}

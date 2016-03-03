@@ -1,36 +1,26 @@
-<header class="nav nav--fixed" role="banner">
-  <div class="nav__item">
+<header class="grid-middle-noGutter-equalHeight headroom">
+  <div class="col">
     <a href="#" class="burger-box">
       <div class="burger">
-        Menu
+        Jeremy Tubbs
       </div>
     </a>
   </div>
-  <div class="nav__item">
-    <a href="/" class="logo">
-      <h1>Jeremy Tubbs</h1>
-    </a>
-  </div>
-  <div class="nav__item">
-    <div class="dropdown">
-      <div class="dropdown-container">
-        <p class="dropdown-button flex-center">All</p>
-        <ul class="dropdown-menu dropdown-select">
-          <li>Artwork</li>
-          <li></li>
-        </ul>
-      </div>
+  <div class="col">
+    <div class="logo">
+      <a href="/">
+        <h1>Jeremy Tubbs</h1>
+      </a>
     </div>
   </div>
 </header>
 
-<nav class="sliding-panel-content" role="navigation">
+<nav class="sliding-panel" role="navigation">
   <ul>
-    <li><a href="/projects">Projects</a></li>
-    <li><a href="/posts">Posts</a></li>
-    {{-- <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li> --}}
+    <li><a href="#">Item 1</a></li>
+    <li><a href="#">Item 2</a></li>
+    <li><a href="#">Item 3</a></li>
   </ul>
 </nav>
 
-<div class="sliding-panel-fade-screen"></div>
+<div class="screen-overlay"></div>

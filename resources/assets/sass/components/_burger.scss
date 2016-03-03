@@ -1,5 +1,9 @@
+$burger-color: #333;
+
 @mixin bun($color) {
   position: absolute;
+  top: 50%;
+  left: 0;
   width: 24px;
   height: 2px;
   background: $color;
@@ -7,18 +11,18 @@
 }
 
 .burger-box {
-  z-index: 997;
+  z-index: 1001;
   position: absolute;
-  left: 25px;
-  top: 18px;
+  top: 7px;
+  left: 1rem;
+  display: block;
   width: 24px;
   height: 24px;
   cursor: pointer;
 }
 
 .burger {
-  top: 10px;
-  content: "";
+  content: '';
   font-size: 0px;
   user-select: none;
   @include bun($burger-color);
@@ -36,8 +40,8 @@
   }
 }
 
-.is-open .burger {
-  // @include transform(translateX(220px));
+.burger--open .burger {
+  @include transform(translateX(220px));
   @include transition(all 0.25s linear);
   background: transparent;
   &:before {
@@ -50,4 +54,3 @@
     transform: rotateZ(45deg);
   }
 }
-

@@ -3,17 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Content;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Jeremytubbs\Igor\Models\Category;
+use Jeremytubbs\Igor\Transformers\ContentTransformer;
 
 class PagesController extends Controller
 {
+    protected $transformer;
+
+    public function __construct(ContentTransformer $transformer)
+    {
+        $this->transformer = $transformer;
+    }
+
     public function home()
     {
-        $layout = 'default';
         // get all site content
-        $content = Category::with('posts', 'projects')->get();
-        return view('app', compact('layout', 'content'));
+        $contents = Content::where('featured', '=', true)
+            ->where('published', '=', true)
+            ->with('columns', 'columns.type', 'tags', 'categories', 'assets', 'assets.source')
+            ->paginate();
+
+        $contents = $this->transformer->collection($contents);
+        return view('pages.home', compact('contents'));
     }
 }

@@ -11,8 +11,8 @@ $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 0;
-$base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
+$base-spacing: $base-line-height * 0.5rem;
+$small-spacing: $base-spacing;
 $base-z-index: 0;
 
 // Colors
@@ -40,39 +40,3 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
-
-// Burger Menu
-$burger-color: #333;
-
-// Nav
-$nav-height: 60px;
-
-// Sliding Panel
-$sliding-panel-border-color: $base-background-color;
-$sliding-panel-background: lighten($sliding-panel-border-color, 5%);
-$sliding-panel-color: $base-font-color;
-$sliding-panel-border: 1px solid $sliding-panel-border-color;
-$sliding-panel-background-hover: $action-color;
-$sliding-panel-color-hover: lighten($base-font-color, 5%);
-$sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
-
-// Dropdown
-$dropdown-color: $base-font-color;
-$dropdown-description-color: lighten($dropdown-color, 40%);
-$dropdown-border: 1px solid rgba(0,0,0,0.1);
-$dropdown-background: $base-background-color;
-$dropdown-background-hover: darken($dropdown-background, 3%);
-$dropdown-inner-border: 1px solid rgba(0,0,0,0.1);
-$dropdown-height: 40px;
-$dropdown-padding: 1em;
-$dropdown-distance-from-menu: 45px;
-$dropdown-arrow-top-distance: 0;
-
-// cards
-$card-border-color: $base-border-color;
-$card-border: 1px solid $card-border-color;
-$card-background: lighten($card-border-color, 10%);
-$card-header-background: $card-background;
-$card-margin: 1em;
-$card-image-hover-opacity: 0.7;
-$card-image-hover-color: $medium-gray;
