@@ -25,7 +25,7 @@ return [
     'use_sitemap' => true,
 
     'assets' => [
-        'deepzoom' => false,
+        'deepzoom' => true,
         'resize'   => true
     ],
 

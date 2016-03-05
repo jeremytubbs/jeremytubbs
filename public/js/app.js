@@ -3334,7 +3334,10 @@ require('./../vendor/openseadragon/openseadragon');
 require('./../vendor/openseadragon/openseadragon-viewerinputhook');
 
 var osd_viewer = null;
-enableSeadragon();
+if (container) {
+  var container = document.querySelector('#osd-container');
+  enableSeadragon();
+}
 
 var osd_thumb = document.querySelector('.osd-thumb');
 if (osd_thumb) {
@@ -3347,7 +3350,6 @@ if (osd_thumb) {
 
 function enableSeadragon(osd_source) {
   if (!osd_viewer) {
-    var container = document.querySelector('#osd-container');
     var osd_source = container.getAttribute('data-osd');
     osd_viewer = OpenSeadragon({
       id: 'osd-container',

@@ -20,8 +20,7 @@ class PagesController extends Controller
     public function home()
     {
         // get all site content
-        $contents = Content::where('featured', '=', true)
-            ->where('published', '=', true)
+        $contents = Content::where('published', '=', true)
             ->with('columns', 'columns.type', 'tags', 'categories', 'assets', 'assets.source')
             ->paginate();
 
