@@ -5,3 +5,9 @@
 {!! $post->body !!}
 </main>
 @endsection
+
+@section('scripts')
+<script>
+	// hello
+</script>
+@endsection
