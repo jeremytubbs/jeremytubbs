@@ -21,7 +21,7 @@ class PagesController extends Controller
     {
         // get all site content
         $contents = Content::where('published', '=', true)
-            ->with('columns', 'columns.type', 'tags', 'categories', 'assets', 'assets.source')
+            ->with('type', 'columns', 'columns.type', 'tags', 'categories', 'assets', 'assets.source')
             ->paginate();
 
         $contents = $this->transformer->collection($contents);
