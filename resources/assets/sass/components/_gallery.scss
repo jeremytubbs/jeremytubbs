@@ -1,0 +1,41 @@
+.gallery {
+  z-index: 0;
+  top: 60px;
+}
+
+/* clear fix */
+.gallery:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .gallery-item ---- */
+
+.gallery-sizer,
+.gallery-item {
+  width: 33%;
+}
+
+.gallery-item {
+  float: left;
+}
+
+.gallery-item img {
+  display: block;
+  max-width: 100%;
+}
+
+@media #{$gl-sm}{
+  .gallery-sizer,
+  .gallery-item {
+    width: 50%;
+  }
+}
+
+// @media #{$gl-xs}{
+//   .gallery-sizer,
+//   .gallery-item {
+//     width: 100%;
+//   }
+// }

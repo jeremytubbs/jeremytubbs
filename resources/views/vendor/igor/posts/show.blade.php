@@ -7,7 +7,11 @@
 @endsection
 
 @section('scripts')
+<script src='/js/vendor/intense.min.js' async></script>
 <script>
-	// hello
+window.onload = function() {
+  var elements = document.querySelectorAll( '.intense' );
+  Intense( elements );
+}
 </script>
 @endsection
