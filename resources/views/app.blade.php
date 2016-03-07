@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{{ \Session::token() }}}">
+  <meta name="google-site-verification" content="QAR0qRI9z2I46V4hkRA-Dkhfp0kwvG5IJ1-vmIZ-fE8">
   <title>{{ env('SITE_NAME') }}</title>
   @yield('styles')
   <link href="/css/app.css" rel="stylesheet">
