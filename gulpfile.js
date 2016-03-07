@@ -15,5 +15,13 @@ elixir(function(mix) {
     mix.sass('app.scss')
        .browserify('app.js');
 
-    mix.scripts('vendor/intense.js', 'public/js/vendor/intense.js');
+    mix.scripts([
+        'vendor/intense.js',
+        'vendor/headroom.js',
+        'vendor/imagesloaded.js',
+        'vendor/masonry.js',
+        'vendor/scrollreveal.js'
+        ],
+        'public/js/vendor/vendor.js'
+    );
 });
