@@ -1,6 +1,6 @@
 <div class="masonry-item reveal">
   <a href="{{ $content->url }}">
-    <img class="grow" srcset="{{ $content->assets[0]['cover']['uri'] }} 1x" />
+    <img class="grow" src="{{ $content->assets[0]['cover']['uri'] }}" />
     <aside class="overlay">
       <div class="plus"></div>
       <div class="title-box">
