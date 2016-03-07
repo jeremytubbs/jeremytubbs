@@ -1,4 +1,4 @@
-<div class="col masonry-item">
+<div class="masonry-item">
   <div class="reveal">
     <a href="{{ $content->url }}">
       <img class="grow" srcset="{{ $content->assets[0]['cover']['uri'] }} 1x" />

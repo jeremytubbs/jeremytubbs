@@ -9,8 +9,10 @@ a:hover {
 
 .overlay {
   position: absolute;
-  bottom: 0 + 1rem;
-  width: calc(100% - 0.5rem);
+  bottom: 0;
+  width: 100%;
+  // bottom: 0 + 1rem;
+  // width: calc(100% - 0.5rem);
   height: 40px;
   color: #fff;
   text-transform: uppercase;

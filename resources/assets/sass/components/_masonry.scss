@@ -15,11 +15,12 @@
 
 .masonry-sizer,
 .masonry-item {
-  width: 33%;
+  width: 32%;
 }
 
 .masonry-item {
   float: left;
+  margin-bottom: 15px;
 }
 
 .masonry-item img {
@@ -35,14 +36,14 @@
 @media #{$gl-md}{
   .masonry-sizer,
   .masonry-item {
-    width: 50%;
+    width: 48%;
   }
 }
 
 @media #{$gl-sm}{
 	.masonry-sizer,
 	.masonry-item {
-	  width: 100%;
+	  width: 98%;
 	}
 }
 

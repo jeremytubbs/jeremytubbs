@@ -1,16 +1,20 @@
+window.sr = new ScrollReveal()
 var grid = document.querySelector('.masonry')
 var gallery = document.querySelector('.gallery')
 
 if (grid) {
-  /* show layout animation */
-  new imagesLoaded( grid, function() {
-    var msnry = new Masonry( grid, {
+  var msnry;
+  imagesLoaded( grid, function() {
+    msnry = new Masonry( grid, {
       itemSelector: '.masonry-item',
       columnWidth: '.masonry-sizer',
-      percentPosition: true,
-      initLayout: false,
+      gutter: 15,
+      percentPosition: true
     })
-    msnry.layout()
+    sr.reveal('.reveal', {
+      origin   : 'bottom',
+      distance : '1rem',
+    })
   })
 }
 
@@ -19,9 +23,12 @@ if (gallery) {
     var msnry = new Masonry( gallery, {
       itemSelector: '.gallery-item',
       columnWidth: '.gallery-sizer',
+      gutter: 15,
       percentPosition: true,
-      initLayout: false,
     })
-    msnry.layout()
+    sr.reveal('.reveal', {
+      origin   : 'bottom',
+      distance : '1rem',
+    })
   })
 }
