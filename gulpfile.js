@@ -19,8 +19,8 @@ elixir(function(mix) {
         'vendor/intense.js',
         'vendor/headroom.js',
         'vendor/imagesloaded.js',
-        'vendor/masonry.js',
-        'vendor/scrollreveal.js'
+        'vendor/masonry.js'
+        //'vendor/scrollreveal.js'
         ],
         'public/js/vendor/vendor.js'
     );
