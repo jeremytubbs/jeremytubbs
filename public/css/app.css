@@ -1467,7 +1467,12 @@ th {
   visibility: hidden;
   overflow: hidden; }
 
-@media screen and (max-width: 35.5em) {
+@media screen and (max-width: 64em) {
+  .masonry-sizer,
+  .masonry-item {
+    width: 50%; } }
+
+@media screen and (max-width: 48em) {
   .masonry-sizer,
   .masonry-item {
     width: 100%; } }
@@ -1710,7 +1715,6 @@ a:hover .title-box {
       margin-top: 4px; }
 
 .avatar-circle {
-  margin-bottom: 20px;
   display: inline-block;
   width: 120px;
   height: 120px;

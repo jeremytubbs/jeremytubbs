@@ -32,9 +32,17 @@
   overflow: hidden;
 }
 
-@media #{$gl-xs}{
+@media #{$gl-md}{
+  .masonry-sizer,
+  .masonry-item {
+    width: 50%;
+  }
+}
+
+@media #{$gl-sm}{
 	.masonry-sizer,
 	.masonry-item {
 	  width: 100%;
 	}
 }
+
