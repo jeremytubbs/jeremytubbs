@@ -1,5 +1,9 @@
 @extends('app')
 
 @section('content')
-{{ $page }}
+<main class="container">
+  <div class="grid">
+  {!! $page->body !!}
+  </div>
+</main>
 @endsection

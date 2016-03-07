@@ -1709,6 +1709,18 @@ a:hover .title-box {
     #osd-controls ul li a {
       margin-top: 4px; }
 
+.avatar-circle {
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 500;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
+
 .header-image {
   padding-top: 50px;
   width: 100%;

@@ -23,6 +23,7 @@ class PagesController extends Controller
         $contents = Content::where('published', '=', true)
             ->orderBy('id', 'desc')
             ->with('type', 'columns', 'columns.type', 'tags', 'categories', 'assets', 'assets.source')
+            ->whereNotNull('content_type_id')
             ->get();
 
         $contents = $this->transformer->collection($contents);
