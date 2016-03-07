@@ -21,6 +21,7 @@ class PagesController extends Controller
     {
         // get all site content
         $contents = Content::where('published', '=', true)
+            ->orderBy('id', 'desc')
             ->with('type', 'columns', 'columns.type', 'tags', 'categories', 'assets', 'assets.source')
             ->paginate();
 

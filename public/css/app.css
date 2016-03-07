@@ -1443,8 +1443,7 @@ th {
 
 /* ---- grid ---- */
 .masonry {
-  z-index: 0;
-  top: 60px; }
+  z-index: 0; }
 
 /* clear fix */
 .masonry:after {
@@ -1455,7 +1454,7 @@ th {
 /* ---- .masonry-item ---- */
 .masonry-sizer,
 .masonry-item {
-  width: 50%; }
+  width: 33%; }
 
 .masonry-item {
   float: left; }
@@ -1769,6 +1768,7 @@ a:hover .title-box {
 .container {
   padding-right: 15px;
   padding-left: 15px;
+  margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
   width: 80%; }
