@@ -1,4 +1,4 @@
-window.sr = new ScrollReveal()
+// window.sr = new ScrollReveal()
 var grid = document.querySelector('.masonry')
 var gallery = document.querySelector('.gallery')
 
@@ -11,10 +11,10 @@ if (grid) {
       gutter: 15,
       percentPosition: true
     })
-    sr.reveal('.reveal', {
-      origin   : 'bottom',
-      distance : '1rem',
-    })
+    // sr.reveal('.reveal', {
+    //   origin   : 'bottom',
+    //   distance : '1rem',
+    // })
   })
 }
 
@@ -26,9 +26,9 @@ if (gallery) {
       gutter: 15,
       percentPosition: true,
     })
-    sr.reveal('.reveal', {
-      origin   : 'bottom',
-      distance : '1rem',
-    })
+    // sr.reveal('.reveal', {
+    //   origin   : 'bottom',
+    //   distance : '1rem',
+    // })
   })
 }
