@@ -24,12 +24,14 @@ if (grid) {
     var msnry = new Masonry( grid, {
       itemSelector: '.masonry-item',
       columnWidth: '.masonry-sizer',
-      percentPosition: true
+      percentPosition: true,
+      initLayout: false,
     })
     sr.reveal('.reveal', {
       origin   : 'bottom',
       distance : '1rem',
     })
+    msnry.layout()
   })
   /* end wait for images loaded */
 }
@@ -39,11 +41,13 @@ if (gallery) {
     var msnry = new Masonry( gallery, {
       itemSelector: '.gallery-item',
       columnWidth: '.gallery-sizer',
-      percentPosition: true
+      percentPosition: true,
+      initLayout: false,
     })
     sr.reveal('.reveal', {
       origin   : 'bottom',
       distance : '1rem',
     })
+    msnry.layout()
   })
 }
