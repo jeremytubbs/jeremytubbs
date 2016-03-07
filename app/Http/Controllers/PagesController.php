@@ -23,7 +23,7 @@ class PagesController extends Controller
         $contents = Content::where('published', '=', true)
             ->orderBy('id', 'desc')
             ->with('type', 'columns', 'columns.type', 'tags', 'categories', 'assets', 'assets.source')
-            ->paginate();
+            ->get();
 
         $contents = $this->transformer->collection($contents);
         return view('pages.home', compact('contents'));
