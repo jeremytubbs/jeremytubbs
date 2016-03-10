@@ -9,7 +9,6 @@
   <title>{{ env('SITE_NAME') }}</title>
   @yield('styles')
   <link href="/css/app.css" rel="stylesheet">
-  @picturefill
 
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

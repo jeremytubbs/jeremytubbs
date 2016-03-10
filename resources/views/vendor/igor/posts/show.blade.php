@@ -10,10 +10,6 @@
 </main>
 @endsection
 
-@section('styles')
-<script src='/js/vendor/intense.js'></script>
-@endsection
-
 @section('scripts')
 <script>
 window.onload = function() {
